@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 	"strings"
 	"time"
 
@@ -162,7 +163,7 @@ func GitHubCallback(c *fiber.Ctx) error {
 		})
 	}
 
-	return c.Redirect("http://localhost:3000/?token=" + tokenString)
+	return c.Redirect(os.Getenv("FRONTEND_URL") + "/?token=" + tokenString)
 }
 
 // User profile stubs
