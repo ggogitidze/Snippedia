@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import { API_URL, FRONTEND_URL } from '../App';
 
 // IMPORTANT: Set REACT_APP_GITHUB_CLIENT_ID in your frontend .env file at the project root.
 const GITHUB_CLIENT_ID = process.env.REACT_APP_GITHUB_CLIENT_ID;
