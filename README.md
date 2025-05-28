@@ -115,7 +115,7 @@ REACT_APP_GITHUB_CLIENT_ID=your_github_client_id
 
 ---
 
-## 📣 Recruiter Notes
+## 📣 Notes
 
 - **Modern, production-ready stack:** React, Go, MongoDB, JWT, OAuth.
 - **Cloud-native deployment:** Vercel & Render.
