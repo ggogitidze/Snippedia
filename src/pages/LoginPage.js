@@ -4,7 +4,7 @@ import { API_URL, FRONTEND_URL } from '../App';
 
 // IMPORTANT: Set REACT_APP_GITHUB_CLIENT_ID in your frontend .env file at the project root.
 const GITHUB_CLIENT_ID = process.env.REACT_APP_GITHUB_CLIENT_ID;
-const REDIRECT_URI = `${API_URL}/auth/github/callback`;
+const REDIRECT_URI = `${process.env.REACT_APP_API_URL}/auth/github/callback`;
 const githubAuthUrl = GITHUB_CLIENT_ID
   ? `https://github.com/login/oauth/authorize?client_id=${GITHUB_CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&scope=user:email`
   : '#';
