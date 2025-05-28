@@ -1,78 +1,128 @@
 # Snippedia
 
-A platform for sharing and discovering code snippets with GitHub authentication.
+**Snippedia** is a modern, full-stack web application for sharing, discovering, and bookmarking code snippets. It features GitHub OAuth authentication, a social feed, and a mobile-friendly responsive UI.
 
-## Project Structure
+---
+
+## 🚀 Live Demo
+
+- **Frontend:** [https://snippedia.vercel.app](https://snippedia.vercel.app)
+
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React (with Tailwind CSS for styling)
+- **Backend:** Go (Fiber web framework)
+- **Database:** MongoDB Atlas (cloud-hosted)
+- **Authentication:** GitHub OAuth + JWT
+- **Deployment:**  
+  - Frontend: Vercel  
+  - Backend: Render
+
+---
+
+## ✨ Features
+
+- **GitHub Login:** Secure OAuth authentication.
+- **Feed:** Browse, search, and filter code snippets.
+- **Snippet Details:** View, bookmark, and react to snippets.
+- **User Profiles:** See your own and others' snippets and bookmarks.
+- **Mobile-First Design:** Fully responsive for phones, tablets, and desktops.
+- **Bookmarking & Reactions:** Save favorites and react to useful code.
+
+---
+
+## 📁 Project Structure
 
 ```
 snippedia/
-├── backend/           # Go backend server
-│   ├── .env          # Backend environment variables
+├── backend/           # Go backend server (API)
 │   └── ...
-├── src/              # React frontend
+├── src/               # React frontend
 │   └── ...
-└── .env              # Frontend environment variables
+├── .env               # Frontend environment variables
+└── README.md
 ```
 
-## Environment Variables
+---
 
-### Backend (.env in /backend)
+## ⚙️ Environment Variables
+
+### Backend (`/backend/.env` on Render)
 ```
-MONGO_URI=your_mongodb_uri
+MONGO_URI=your_mongodb_atlas_uri
 DB_NAME=Snippedia
 PORT=8080
 GITHUB_CLIENT_ID=your_github_client_id
 GITHUB_CLIENT_SECRET=your_github_client_secret
-JWT_SECRET=your_secure_jwt_secret
-ALLOWED_ORIGINS=http://localhost:3000
+JWT_SECRET=your_jwt_secret
+FRONTEND_URL=https://snippedia.vercel.app
 ```
 
-### Frontend (.env in root)
+### Frontend (`.env` in project root, on Vercel)
 ```
-REACT_APP_API_URL=http://localhost:8080
-REACT_APP_FRONTEND_URL=http://localhost:3000
+REACT_APP_API_URL=https://snippedia.onrender.com
+REACT_APP_FRONTEND_URL=https://snippedia.vercel.app
 REACT_APP_GITHUB_CLIENT_ID=your_github_client_id
 ```
 
-## Development Setup
+---
 
-1. Clone the repository
-2. Set up environment variables
-3. Install dependencies:
+## 🖥️ Local Development
+
+1. **Clone the repo:**
    ```bash
-   # Frontend
-   npm install
-   
-   # Backend
-   cd backend
-   go mod download
+   git clone https://github.com/ggogitidze/Snippedia.git
+   cd Snippedia
    ```
-4. Run the development servers:
+
+2. **Set up environment variables:**  
+   - Copy `.env.example` files (if present) or create `.env` files as above.
+
+3. **Start the backend:**
    ```bash
-   # Frontend
-   npm start
-   
-   # Backend
    cd backend
    go run main.go
    ```
 
-## Deployment
+4. **Start the frontend:**
+   ```bash
+   cd ..
+   npm install
+   npm start
+   ```
 
-### Backend (Render)
-1. Create a new Web Service
-2. Connect your GitHub repository
-3. Set environment variables
-4. Build Command: `cd backend && go build -o main`
-5. Start Command: `cd backend && ./main`
+5. **Visit:**  
+   - Frontend: [http://localhost:3000](http://localhost:3000)  
+   - Backend API: [http://localhost:8080](http://localhost:8080)
 
-### Frontend (Vercel)
-1. Create a new project
-2. Connect your GitHub repository
-3. Set environment variables
-4. Deploy
+---
 
-## GitHub OAuth Setup
-1. Create a new OAuth App in GitHub
-2. Set Homepage URL to your frontend URL
-3. Set Authorization callback URL to your backend URL + `/auth/github/callback` 
+## 🌐 Deployment
+
+- **Frontend:** [Vercel](https://vercel.com/)
+- **Backend:** [Render](https://render.com/)
+- **Database:** [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+
+---
+
+## 👤 Author
+
+- **Giorgi Gogitidze**  
+  [GitHub](https://github.com/ggogitidze)
+
+---
+
+## 📣 Recruiter Notes
+
+- **Modern, production-ready stack:** React, Go, MongoDB, JWT, OAuth.
+- **Cloud-native deployment:** Vercel & Render.
+- **Security best practices:** No secrets in repo, JWT not logged, CORS configured.
+- **Mobile-first:** Fully responsive, tested on phones and tablets.
+- **Clean code:** Modular, well-commented, and easy to extend.
+
+---
+
+> **Thank you for reviewing Snippedia! Feel free to reach out for a walkthrough or questions.** 
